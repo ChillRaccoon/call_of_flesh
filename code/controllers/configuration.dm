@@ -45,7 +45,7 @@
 	var/del_new_on_log = 1				// del's new players if they log before they spawn in
 	var/allow_Metadata = 0				// Metadata is supported.
 	var/popup_admin_pm = 0				//adminPMs to non-admins show in a pop-up 'reply' window when set to 1.
-	var/fps = 16
+	var/fps = 26
 	var/allow_holidays = 0				//toggles whether holiday-specific content should be used
 
 	var/hostedby = null
@@ -337,7 +337,7 @@
 				if("ticklag")
 					var/ticklag = text2num(value)
 					if(ticklag > 0)
-						fps = 10 / ticklag
+						fps = 25 / ticklag
 				if("fps")
 					fps = text2num(value)
 				if("automute_on")

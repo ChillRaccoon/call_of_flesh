@@ -49,6 +49,7 @@
 #include "code\__DEFINES\tablecrafting.dm"
 #include "code\__DEFINES\tgui.dm"
 #include "code\__DEFINES\tick.dm"
+#include "code\__HELPERS\4LOCALIZE.dm"
 #include "code\__HELPERS\_logging.dm"
 #include "code\__HELPERS\_string_lists.dm"
 #include "code\__HELPERS\cmp.dm"
