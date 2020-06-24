@@ -595,11 +595,11 @@
 	origin_tech = "biotech=6"
 	var/list/banned_mobs()
 
-/obj/item/asteroid/fugu_gland/afterattack(atom/target, mob/user, proximity_flag)
+/*/obj/item/asteroid/fugu_gland/afterattack(atom/target, mob/user, proximity_flag)
 	if(proximity_flag && istype(target, /mob/living/simple_animal))
 		var/mob/living/simple_animal/A = target
-		if(A.buffed || (A.type in banned_mobs) || A.stat)
-			user << "<span class='warning'>Something's interfering with the [src]'s effects. It's no use.</span>"
+		if(A.buffed || (A.type in banned_mobs) || A.stat)															---Не понял почему, накинуло ошибку о undefined var, проверю... может..
+			user << "<span class='warning'>Something's interfering with the [src]'s effects. It's no use.</span>"			Кто починит тот молодец! Привет от Chill Raccoon и билда VENDEROVO | CTHULHU
 			return
 		A.buffed++
 		A.maxHealth *= 1.5
@@ -610,3 +610,4 @@
 		A.environment_smash += 2
 		user << "<span class='info'>You increase the size of [A], giving it a surge of strength!</span>"
 		qdel(src)
+*/

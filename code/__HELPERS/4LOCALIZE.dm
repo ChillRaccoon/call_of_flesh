@@ -1,3 +1,4 @@
+//Привет от Chill Raccoon всем кто сюда решил залезть и проверить чё тут, вообщем это конвертация и фикс текста на RU
 /proc/r_lowertext(text)
 	var/t = ""
 	for(var/i = 1, i <= length(text), i++)
