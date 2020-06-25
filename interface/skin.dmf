@@ -629,13 +629,13 @@ window "mainwindow"
 		size = 640x440
 		anchor1 = none
 		anchor2 = none
-		background-color = none
+		background-color = #080808
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "Space Station 13"
+		title = "S.T.A.L.K.E.R -- CAVIANT"
 		can-minimize = false
 		is-maximized = true
-		icon = 'icons\\ss13_64.png'
+		icon = 'interface\\icon.png'
 		macro = "macro"
 		outer-size = 1936x1066
 		inner-size = 1920x1027
@@ -650,17 +650,18 @@ window "mainwindow"
 		saved-params = ""
 	elem "mainvsplit"
 		type = CHILD
-		pos = 3,0
-		size = 632x391
+		pos = 0,0
+		size = 640x440
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = none
+		background-color = #191919
 		saved-params = "splitter"
 		right = "rpane"
 		is-vert = true
+		splitter = 70
 	elem "tooltip"
 		type = BROWSER
-		pos = 0,0
+		pos = 601,1
 		size = 999x999
 		anchor1 = none
 		anchor2 = none
@@ -692,7 +693,6 @@ window "mapwindow"
 		anchor2 = 100,100
 		font-family = "Arial"
 		font-size = 7
-		text-color = none
 		is-default = true
 		saved-params = "icon-size"
 		on-show = ".winset\"mainwindow.mainvsplit.left=mapwindow\""
@@ -702,7 +702,7 @@ window "outputwindow"
 	elem "outputwindow"
 		type = MAIN
 		pos = 281,0
-		size = 640x479
+		size = 640x480
 		anchor1 = none
 		anchor2 = none
 		background-color = #c2c2c2
@@ -713,12 +713,11 @@ window "outputwindow"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
-		outer-size = 654x493
-		inner-size = 640x479
+		outer-size = 654x494
 	elem "output"
 		type = OUTPUT
 		pos = 0,0
-		size = 640x456
+		size = 640x457
 		anchor1 = 0,0
 		anchor2 = 100,100
 		background-color = #e4e4e4
@@ -727,7 +726,7 @@ window "outputwindow"
 		style = ".system {color:#ff0000;}"
 	elem "hotkey_toggle"
 		type = BUTTON
-		pos = 552,456
+		pos = 552,457
 		size = 85x17
 		anchor1 = 100,100
 		anchor2 = none
@@ -740,15 +739,15 @@ window "outputwindow"
 		button-type = pushbox
 	elem "input"
 		type = INPUT
-		pos = 5,455
+		pos = 5,456
 		size = 547x20
 		anchor1 = 0,100
 		anchor2 = 100,100
 		font-style = "bold"
-		text-color = #cb4646
+		text-color = #ff6600
 		background-color = #000000
 		is-default = true
-		border = sunken
+		border = line
 		saved-params = "command"
 		command = "say"
 
@@ -875,9 +874,12 @@ window "browserwindow"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
+		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Browser"
 		is-pane = true
+		outer-size = 656x538
+		inner-size = 640x499
 	elem "browser"
 		type = BROWSER
 		pos = 0,0
@@ -906,9 +908,15 @@ window "infowindow"
 		size = 638x475
 		anchor1 = 0,0
 		anchor2 = 100,100
+		font-style = "bold"
+		text-color = #d35500
+		background-color = #393939
 		is-default = true
 		saved-params = ""
-		highlight-color = #00aa00
+		highlight-color = #ff8a3b
+		tab-text-color = #da5700
+		tab-background-color = #5a5a5a
+		tab-font-style = "bold"
 		allow-html = false
 		on-show = ".winset\"rpane.infob.is-visible=true;rpane.browseb.is-visible=true?rpane.infob.pos=130,0:rpane.infob.pos=65,0 rpane.textb.is-visible=true rpane.infob.is-checked=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=infowindow\""
 		on-hide = ".winset\"rpane.infob.is-visible=false;rpane.browseb.is-visible=true?rpane.browseb.is-checked=true rpane.rpanewindow.left=browserwindow:rpane.textb.is-visible=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=\""
